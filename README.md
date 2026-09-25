@@ -1,18 +1,28 @@
 # emby-rules
 
-个人维护的 Emby 分流规则集，Surge/Loon/Clash 通用格式（classical text list）。
+自己用的 Emby 分流规则，Surge / Loon / Clash 通用的文本规则格式。
 
-- `Emby.list` = blackmatrix7/ios_rule_script 原版社区规则(52条) + 本人私有线路域名(15条)，去重合并
-- 原版上游更新缓慢（该分类社区不活跃），本仓库改为按需手动维护
+`Emby.list` 由两部分组成：
+
+- blackmatrix7/ios_rule_script 的 Emby 规则。上游这一类很久没更新，我不再同步，改成手动维护
+- 自己在用的 Emby 线路域名，以前分散在各个客户端的配置里，现在统一放这里
+
+新线路直接加到文件末尾。加之前看一眼有没有被已有的 `DOMAIN-KEYWORD` 或 `DOMAIN-SUFFIX` 覆盖，避免重复。
+
+`PROCESS-NAME,com.mb.android` 只对安卓上的 Clash 有用，Surge iOS 会忽略这一行。
 
 ## 用法
 
-Surge:
+Surge：
+
 ```
 RULE-SET,https://raw.githubusercontent.com/godsonkg/emby-rules/main/Emby.list,Emby
 ```
 
-Loon:
+Loon：
+
 ```
 https://raw.githubusercontent.com/godsonkg/emby-rules/main/Emby.list, policy=Emby, tag=Emby, enabled=true
 ```
+
+`Emby` 换成你配置里的策略组名。

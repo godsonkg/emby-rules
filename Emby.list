@@ -1,19 +1,14 @@
-# NAME: Emby (私有合并版)
-# 来源：blackmatrix7/ios_rule_script 原版(52条, UPDATED 2025-06-06) + 本人手动维护的私有线路域名(15条)
-# 合并日期：2026-07-09
-# 维护方式：原版规则不再跟随上游自动更新(该分类上游本就不活跃)；私有线路照旧手动增删。
+# NAME: Emby
+# 来源：blackmatrix7/ios_rule_script 的 Emby 规则（上游 2025-06-06 版）+ 自己用的线路
+# 合并：2026-07-09；2026-09-25 去掉 8 条已被 DOMAIN-KEYWORD 覆盖的重复规则
+# 上游这一类很久没更新，不再同步，全部手动维护
 
-# ============ 通用/社区共享线路(来自 blackmatrix7 原版) ============
+# ---- 公共线路（来自 blackmatrix7）----
 DOMAIN,emby.enjoyit.eu.org
 DOMAIN,emby.lcloud.wiki
 DOMAIN,notnetflix.cos.cat
 DOMAIN-SUFFIX,123456.al
 DOMAIN-SUFFIX,285286.xyz
-DOMAIN-SUFFIX,agahk1.jmsooo.com
-DOMAIN-SUFFIX,agajp1.jmsooo.com
-DOMAIN-SUFFIX,agasg1.jmsooo.com
-DOMAIN-SUFFIX,aws.jmsooo.com
-DOMAIN-SUFFIX,cf1.jmsooo.com
 DOMAIN-SUFFIX,cristiamo.xyz
 DOMAIN-SUFFIX,emby.cjpc.cc
 DOMAIN-SUFFIX,emby.cjpc.tv
@@ -30,20 +25,17 @@ DOMAIN-SUFFIX,emby.nyancat.net
 DOMAIN-SUFFIX,emby.ok.edu.hk
 DOMAIN-SUFFIX,emby.paoche.ooo
 DOMAIN-SUFFIX,emby.prprcloud.com
-DOMAIN-SUFFIX,emby.wtf
 DOMAIN-SUFFIX,emby.xeton.dev
 DOMAIN-SUFFIX,emby.ytoo.li
 DOMAIN-SUFFIX,embymv.tk
 DOMAIN-SUFFIX,embyplus.org
 DOMAIN-SUFFIX,embyserver.ga
-DOMAIN-SUFFIX,hinet.jmsooo.com
 DOMAIN-SUFFIX,imetyou.top
 DOMAIN-SUFFIX,jellyfin.asia
 DOMAIN-SUFFIX,jellyfin.xeton.dev
 DOMAIN-SUFFIX,line.emby.men
 DOMAIN-SUFFIX,mickeycloud.com
 DOMAIN-SUFFIX,movie.xeton.dev
-DOMAIN-SUFFIX,ntt1.jmsooo.com
 DOMAIN-SUFFIX,ohhhh.org
 DOMAIN-SUFFIX,peachmv.me
 DOMAIN-SUFFIX,pilipiliultra.com
@@ -55,9 +47,10 @@ DOMAIN-SUFFIX,xmsl.org
 DOMAIN-KEYWORD,emby.wtf
 DOMAIN-KEYWORD,jmsooo
 DOMAIN-KEYWORD,odysseyplus
+# 下面这条只对 Clash（安卓）有用，Surge iOS 会忽略
 PROCESS-NAME,com.mb.android
 
-# ============ 本人私有线路(原分散写在各端配置文件的 Rule 区，现收拢至此) ============
+# ---- 自己的线路 ----
 DOMAIN,candytallymovie.vip
 DOMAIN-SUFFIX,poly.emby.moe
 DOMAIN,emby2.yunti.online
